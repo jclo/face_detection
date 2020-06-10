@@ -117,7 +117,7 @@ def _process_video(op, type, method, source, dest):
                 mod_frame = detector.get_image_with_faces(frame)
                 out.write(mod_frame)
                 cv2.imshow('Face Detection', mod_frame)
-                if cv2.waitKey(1) == 13:
+                if cv2.waitKey(30) == 13:
                     break
 
             cap.release()
@@ -146,7 +146,7 @@ def _process_video(op, type, method, source, dest):
                 # exit if the enter key is pushed
                 # To speed up or slow down the video rate, change the delay
                 # passed-in argument to waitKey().
-                if cv2.waitKey(1) == 13:
+                if cv2.waitKey(30) == 13:
                     break
             cap.release()
             cv2.destroyAllWindows()
